@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    background-color: #1B8C3E;
+    color: white;
+    padding: 0 1rem;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menuBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.avatar {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-weight: bold;
+}
