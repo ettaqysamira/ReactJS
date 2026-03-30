@@ -1,6 +1,4 @@
 import styles from './Header.module.css';
-
-// Modifier l'interface HeaderProps :
 interface HeaderProps {
  title: string;
  onMenuClick: () => void;

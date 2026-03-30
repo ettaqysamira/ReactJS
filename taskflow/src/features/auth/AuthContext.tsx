@@ -1,4 +1,3 @@
-// src/features/auth/AuthContext.tsx
 import { createContext, useContext, useReducer } from 'react';
 import { authReducer, initialState } from './authReducer';
 import type { AuthState, AuthAction} from './authReducer';

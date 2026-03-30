@@ -1,4 +1,3 @@
-// src/features/auth/authReducer.ts
 export interface User {
  id: string;
  email: string;
