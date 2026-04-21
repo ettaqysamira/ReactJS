@@ -22,6 +22,8 @@ export default function Dashboard() {
   const [showForm, setShowForm] = useState(false);
   const [error, setError] = useState<string | null>(null);
 const [saving, setSaving] = useState(false);
+const dangerousName = '<img src=x onerror=alert("HACK")>';
+
 
   // GET 
   useEffect(() => {
@@ -119,6 +121,7 @@ const [saving, setSaving] = useState(false);
 
   return (
     <div className={styles.layout}>
+      <div dangerouslySetInnerHTML={{ __html: dangerousName }} />
       <HeaderMUI
         title="TaskFlow"
         onMenuClick={() => setSidebarOpen(p => !p)}

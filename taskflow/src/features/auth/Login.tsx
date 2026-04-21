@@ -37,13 +37,28 @@ export default function Login() {
       }
 
       //Retirer le mot de passe du user avant dispatch
-      const { password: _, ...user } = users[0];
-      dispatch({ type: 'LOGIN_SUCCESS', payload: user });
+      // Retirer le mot de passe
+const { password: _, ...user } = users[0];
+
+//Créer un fake JWT
+  const fakeToken = btoa(JSON.stringify({
+    userId: user.id,
+    email: user.email,
+    role: 'admin',
+    exp: Date.now() + 3600000 
+  }));
+
+  // Dispatch avec token
+  dispatch({
+    type: 'LOGIN_SUCCESS',
+    payload: { ...user, token: fakeToken }
+  });
 
     } catch {
       dispatch({ type: 'LOGIN_FAILURE', payload: 'Erreur serveur' });
     }
   }
+  
 
   return (
     <div className={styles.container}>
